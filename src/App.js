@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Header from './components /Header';
 import Album from './pages/Album';
 import Favorites from './pages/Favorites';
 import Login from './pages/Login';
@@ -12,6 +13,7 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
+        <Route exact path="/header" component={ Header } />
         <Switch>
           <Route exact path="/" component={ Login } />
           <Route path="/search" component={ Search } />
@@ -20,6 +22,9 @@ class App extends React.Component {
           <Route exact path="/profile" component={ Profile } />
           <Route path="/profile/edit" component={ ProfileEdit } />
           <Route path="*" component={ NotFound } />
+          {/* <Route exact path="/">
+            {logado ? <Redirect to="/dashboard" /> : <Login />}
+          </Route> */}
         </Switch>
       </BrowserRouter>
     );
