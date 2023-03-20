@@ -8,7 +8,7 @@ class Album extends React.Component {
   constructor() {
     super();
     this.state = {
-      musicas: null,
+      musicas: '',
     };
   }
 
@@ -21,7 +21,6 @@ class Album extends React.Component {
       { musicas: teste,
       },
     );
-    console.log(teste);
   }
 
   render() {
@@ -31,16 +30,23 @@ class Album extends React.Component {
         <Header />
 
         { musicas && (
-          <>
-            <div>
-              <h1 data-testid="artist-name">{musicas[0].artistName}</h1>
-              <img src={ musicas[0].artworkUrl100 } alt={ musicas[0].collectionName } />
-              <h3 data-testid="album-name">
-                {musicas[0].collectionName}
-              </h3>
-            </div>
-            <MusicCard musicas={ musicas } />
-          </>
+          <div>
+            <h1 data-testid="artist-name">{musicas[0].artistName}</h1>
+            <img src={ musicas[0].artworkUrl100 } alt={ musicas[0].collectionName } />
+            <h3 data-testid="album-name">
+              {musicas[0].collectionName}
+            </h3>
+            {musicas.filter((_retorno, index) => index !== 0).map((retorno, index) => (
+              <div key={ index }>
+                <MusicCard
+                  trackName={ retorno.trackName }
+                  previewUrl={ retorno.previewUrl }
+                  trackId={ retorno.trackId }
+
+                />
+              </div>
+            )) }
+          </div>
         )}
       </div>
     );
