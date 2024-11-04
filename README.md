@@ -6,7 +6,7 @@ Bem-vindo ao **LyricLounge**! Este projeto foi desenvolvido durante o curso de D
 
 - [Sobre o Projeto](#sobre-o-projeto)
 - [Funcionalidades](#funcionalidades)
-- [Atualizações] (#atualizacoes)
+- [Atualizações](#atualizacoes)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Instalação](#instalação)
 - [Uso](#uso)
@@ -28,7 +28,7 @@ O **LyricLounge** é uma aplicação web onde os usuários podem:
 - **Favoritar Músicas**: Adicione músicas à sua lista de favoritos.
 - **Acesso aos Favoritos**: Visualize suas músicas e álbuns favoritos em uma aba dedicada.
 
-## Futuras Atualizações
+## Atualizações
 
 - **Página de Favoritoa**: Ao favoritar a música irá aparecer na página de favoritos.
 - **Perfil**: Será possivel ver o Perfil
