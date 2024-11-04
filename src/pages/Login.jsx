@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Message from '../components /Message';
+import capa from '../img/capa.png';
+import '../css/index.css';
 import { createUser } from '../services/userAPI';
 
 class Login extends React.Component {
@@ -53,6 +55,8 @@ class Login extends React.Component {
           logado ? <Message />
             : (
               <div data-testid="page-login">
+                <img src={ capa } alt="Logo da Lyric Lounge" />
+                <h4>Digite seu nome</h4>
                 <label htmlFor="">
                   <input
                     type="text"
@@ -61,6 +65,7 @@ class Login extends React.Component {
                   />
                 </label>
                 <button
+                  className="button-enter"
                   data-testid="login-submit-button"
                   disabled={ isDisabled }
                   onClick={ this.onSaveButtonClick }

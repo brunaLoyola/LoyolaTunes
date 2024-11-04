@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
+import '../css/header.css';
 import Message from './Message';
 
 class Header extends React.Component {
@@ -34,9 +35,9 @@ class Header extends React.Component {
           </div>
           { aguardando ? <Message />
             : (
-              <p data-testid="header-user-name">
+              <div className="user-name" data-testid="header-user-name">
                 { usuario }
-              </p>
+              </div>
             )}
         </header>
       </div>

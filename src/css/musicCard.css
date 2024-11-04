@@ -1,0 +1,58 @@
+/* Estilos gerais para MusicCard */
+.music-card {
+    background-color: #1e1e1e; /* Fundo escuro para contraste */
+    border: 1px solid #FF914D; /* Borda laranja */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 1rem; /* Espaçamento interno */
+    margin: 1rem 0; /* Margem entre os cartões */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para profundidade */
+    color: #ffffff; /* Cor do texto */
+    display: flex; /* Flexbox para disposição */
+    flex-direction: row; /* Disposição em linha */
+    align-items: left; /* Alinha verticalmente os itens */
+    justify-content: space-between; /* Espaço entre os itens */
+  }
+  
+  /* Título da música */
+  .music-card h2 {
+    font-size: 1.5rem; /* Tamanho do texto */
+    margin-right: 1rem; /* Margem à direita do título */
+    color: #FF914D; /* Cor do título */
+    flex: 1; /* Permite que o título use o espaço disponível */
+  }
+  .music-card-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cartões se quebrem para a próxima linha, se necessário */
+    gap: 1rem; /* Espaçamento entre os cartões */
+    justify-content: space-between; /* Distribui o espaço entre os cartões */
+  }
+  
+  
+  /* Estilo do áudio */
+  audio {
+    width: 250px; /* Largura fixa para o player */
+    margin-right: 1rem; /* Espaçamento à direita do player */
+    border-radius: 5px; /* Bordas arredondadas do player */
+    outline: none; /* Remove contorno padrão */
+  }
+  
+  /* Estilo para o label e checkbox */
+  .music-card label {
+    display: flex; /* Flexbox para alinhamento */
+    align-items: center; /* Alinha verticalmente */
+    cursor: pointer; /* Cursor de pointer para indicar interatividade */
+    color: #FFD700; /* Cor do texto do label */
+  }
+  
+  .music-card input[type="checkbox"] {
+    margin-left: 0.5rem; /* Espaçamento à esquerda do checkbox */
+    accent-color: #FF914D; /* Cor do checkbox */
+  }
+  
+  /* Mensagem de carregamento */
+  .loading-message {
+    color: #FFD700; /* Cor para a mensagem de carregamento */
+    flex: 0 0 100%; /* Faz a mensagem ocupar toda a linha, se necessário */
+    margin-top: 0.5rem; /* Espaçamento acima da mensagem */
+  }
+  

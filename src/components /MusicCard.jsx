@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Message from './Message';
+import '../css/musicCard.css'; // Certifique-se de importar o CSS
 
 class MusicCard extends React.Component {
   constructor() {
@@ -43,30 +44,31 @@ class MusicCard extends React.Component {
     const { trackName, previewUrl, trackId } = this.props;
     const { isChecked, carregando, iniciando } = this.state;
     return (
-      <div>
-        { iniciando ? <Message />
-
+      <div className="music-card">
+        { iniciando ? <Message className="loading-message" />
           : (
-            <div>
-              <h2>{trackName}</h2>
-              <audio data-testid="audio-component" src={ previewUrl } controls>
-                <track kind="captions" />
-                O seu navegador não suporta o elemento
-                <code>audio</code>
-              </audio>
-              { !carregando ? (
-                <label
-                  htmlFor="checkboxMusic"
-                >
-                  Favorita
-                  <input
-                    data-testid={ `checkbox-music-${trackId}` }
-                    type="checkbox"
-                    checked={ isChecked }
-                    onChange={ this.checkFavorite }
-                  />
-                </label>
-              ) : <Message />}
+            <div className="music-card-container">
+              <div className="music-card-content">
+                <h2>{trackName}</h2>
+                <audio data-testid="audio-component" src={ previewUrl } controls>
+                  <track kind="captions" />
+                  O seu navegador não suporta o elemento
+                  <code>audio</code>
+                </audio>
+                { !carregando ? (
+                  <label
+                    htmlFor={ `checkbox-music-${trackId}` } // Ajuste para ID correto
+                  >
+                    Favorita
+                    <input
+                      data-testid={ `checkbox-music-${trackId}` }
+                      type="checkbox"
+                      checked={ isChecked }
+                      onChange={ this.checkFavorite }
+                    />
+                  </label>
+                ) : <Message className="loading-message" />}
+              </div>
             </div>
           )}
       </div>
