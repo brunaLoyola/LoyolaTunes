@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/nome-do-repositorio/static/css/main.3a0d84df.css",
+    "main.js": "/nome-do-repositorio/static/js/main.4099306d.js",
+    "static/media/capa.png": "/nome-do-repositorio/static/media/capa.5893ce608556fca5dee7.png",
+    "index.html": "/nome-do-repositorio/index.html",
+    "main.3a0d84df.css.map": "/nome-do-repositorio/static/css/main.3a0d84df.css.map",
+    "main.4099306d.js.map": "/nome-do-repositorio/static/js/main.4099306d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a0d84df.css",
+    "static/js/main.4099306d.js"
+  ]
+}
